@@ -39,4 +39,8 @@ public class AuthorRequest {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Author toModel() {
+        return new Author(this.name, this.email, this.description);
+    }
 }
